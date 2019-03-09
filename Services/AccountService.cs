@@ -29,7 +29,7 @@ namespace FrontierCodingTest.Services
             AccountsByStatus accountsByStatusInactive = null;
             foreach (AccountStatus val in Enum.GetValues(typeof(AccountStatus)))
             {
-                var selAccounts = accounts.Where(a => a.AccountStatusId == (int)val).ToList();
+                var selAccounts = accounts.Where(a => a.AccountStatusId == (int)val).OrderBy(a => a.PaymentDueDate).ToList();
                 if (selAccounts.Count() > 0)
                 {
                     AccountsByStatus accountsByStatus = new AccountsByStatus();
