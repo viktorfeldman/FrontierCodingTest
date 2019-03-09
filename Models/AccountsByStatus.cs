@@ -11,6 +11,5 @@ namespace FrontierCodingTest.Models
     {
         public AccountStatus Status { get; set; }
         public List<Account> Accounts { get; set; }
-        public string Extension { get; set; }
     }
 }
